@@ -30,9 +30,37 @@ var triviaQuestions = [{
 	question: "Who directed Pixar's first three feature films?",
 	answerList: ["Peter Docter", "Brad Bird", "John Lasseter", "Peter Sohn"],
 	answer: 2
+},{
+	question: "Who voiced Sadness in 'Inside Out'?",
+	answerList: ["Amy Poehler", "Phyllis Smith", "Mindy Kaling", "Phyllis Vance"],
+	answer: 1
+},{
+	question: "Billy Crystal voices Mike Wazowski in 'Monster, Inc.' but what role did he originally turn down from Pixar?",
+	answerList: ["Hopper", "Woody", "Marlin", "Buzz Lightyear"],
+	answer: 3
+},{
+	question: "The voice of WALL-E, Ben Burtt, also voiced what other famous robot?",
+	answerList: ["R2-D2", "Alpha 5", "C-3PO", "Astro Boy"],
+	answer: 0
+},{
+	question: "Brad Bird directed which animated film prior to taking on 'The Incredibles'?",
+	answerList: ["The Brave Little Toaster", "The Iron Giant", "Tarzan", "The Prince of Egypt"],
+	answer: 1
+},{
+	question: "Pixar was originally a division of which studio?",
+	answerList: ["Dreamworks", "Industrial Light & Magic", "Disney", "Lucasfilm"],
+	answer: 3
+},{
+	question: "What is the name of the famour explorer from 'Up' that Carl looked up to as a boy?",
+	answerList: ["Charles F. Muntz", "Chuck M. James", "Charlie Rose", "Carl Carlton"],
+	answer: 0
+},{
+	question: "'A Bug's Life' was loosely based on what other film?",
+	answerList: ["I Live in Fear", "Rashomon", "Seven Samurai", "Magneficent Seven"],
+	answer: 2
 }];
 
-var gifArray = ['question1', 'question2', 'question3', 'question4', 'question5', 'question6', 'question7', 'question8',]
+var gifArray = ['question1', 'question2', 'question3', 'question4', 'question5', 'question6', 'question7', 'question8', 'question9', 'question10', 'question11', 'question12', 'question13','question14','question15'];
 var currentQuestion;
 var correctAnswer;
 var incorrectAnswer;
