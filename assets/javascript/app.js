@@ -52,7 +52,7 @@ $('#startBtn').on('click', function(){
 });
 
 $('#startOverBtn').on('click', function(){
-	$(this).html("");
+	$(this).hide();
 	newGame();
 });
 
@@ -75,7 +75,7 @@ function newQuestion(){
 	answered = true;
 	
 	//sets up new questions & answerList
-	$('.question').html(triviaQuestions[currentQuestion].question);
+	$('.question').html('<h2>' + triviaQuestions[currentQuestion].question + '</h2>');
 	for(var i = 0; i < 4; i++){
 		var choices = $('<div>');
 		choices.text(triviaQuestions[currentQuestion].answerList[i]);
@@ -93,7 +93,7 @@ function newQuestion(){
 }
 
 function countdown(){
-	seconds = 10;
+	seconds = 20;
 	$('#timeLeft').html('<h3>Time Remaining: ' + seconds + '</h3>');
 	answered = true;
 	//sets timer to go down
@@ -102,10 +102,10 @@ function countdown(){
 
 function answerCountdown(){
 	if(currentQuestion == (triviaQuestions.length-1)){
-		setTimeout(scoreboard, 2000)
+		setTimeout(scoreboard, 5000)
 	} else{
 		currentQuestion++;
-		setTimeout(newQuestion, 2000);
+		setTimeout(newQuestion, 5000);
 	}	
 }
 
@@ -153,7 +153,7 @@ function scoreboard(){
 	$('#correctAnswers').html("Correct Answers: " + correctAnswer);
 	$('#incorrectAnswers').html("Incorrect Answers: " + incorrectAnswer);
 	$('#unanswered').html("Unanswered: " + unanswered);
-
-	$('#startOverBtn').html('<button>Start Over</button>');
+	$('#startOverBtn').addClass('reset');
+	$('#startOverBtn').html('Start Over?');
 
 }
