@@ -61,10 +61,7 @@ var triviaQuestions = [{
 }];
 
 var gifArray = ['question1', 'question2', 'question3', 'question4', 'question5', 'question6', 'question7', 'question8', 'question9', 'question10', 'question11', 'question12', 'question13','question14','question15'];
-var currentQuestion;
-var correctAnswer;
-var incorrectAnswer;
-var unanswered;
+var currentQuestion; var correctAnswer; var incorrectAnswer; var unanswered; var seconds; var time; var answered; var userSelect;
 var wrong = false;
 var messages = {
 	correct: "Yes, that's right!",
@@ -72,7 +69,6 @@ var messages = {
 	endTime: "Out of time!",
 	finished: "Alright! Let's see how well you did."
 }
-var seconds; var time; var answered; var userSelect;
 
 $('#startBtn').on('click', function(){
 	$(this).hide();
@@ -85,10 +81,10 @@ $('#startOverBtn').on('click', function(){
 });
 
 function newGame(){
-	$('#finalMessage').html("");
-	$('#correctAnswers').html("");
-	$('#incorrectAnswers').html("");
-	$('#unanswered').html("");
+	$('#finalMessage').empty();
+	$('#correctAnswers').empty();
+	$('#incorrectAnswers').empty();
+	$('#unanswered').empty();
 	currentQuestion = 0;
 	correctAnswer = 0;
 	incorrectAnswer = 0;
@@ -97,12 +93,13 @@ function newGame(){
 }
 
 function newQuestion(){
-	$('#message').html("");
-	$('#correctedAnswer').html("");
-	$('#gif').html(" ");
+	$('#message').empty();
+	$('#correctedAnswer').empty();
+	$('#gif').empty();
 	answered = true;
 	
 	//sets up new questions & answerList
+	$('#currentQuestion').html('Question #'+(currentQuestion+1)+'/'+triviaQuestions.length);
 	$('.question').html('<h2>' + triviaQuestions[currentQuestion].question + '</h2>');
 	for(var i = 0; i < 4; i++){
 		var choices = $('<div>');
@@ -121,20 +118,11 @@ function newQuestion(){
 }
 
 function countdown(){
-	seconds = 20;
+	seconds = 15;
 	$('#timeLeft').html('<h3>Time Remaining: ' + seconds + '</h3>');
 	answered = true;
 	//sets timer to go down
 	time = setInterval(showCountdown, 1000);
-}
-
-function answerCountdown(){
-	if(currentQuestion == (triviaQuestions.length-1)){
-		setTimeout(scoreboard, 5000)
-	} else{
-		currentQuestion++;
-		setTimeout(newQuestion, 5000);
-	}	
 }
 
 function showCountdown(){
@@ -148,8 +136,9 @@ function showCountdown(){
 }
 
 function answerPage(){
-	$('.thisChoice').empty();
-	$('.question').html("");
+	$('#currentQuestion').empty();
+	$('.thisChoice').empty(); //Clears question page
+	$('.question').empty();
 
 	var rightAnswerText = triviaQuestions[currentQuestion].answerList[triviaQuestions[currentQuestion].answer];
 	var rightAnswerIndex = triviaQuestions[currentQuestion].answer;
@@ -168,14 +157,20 @@ function answerPage(){
 		$('#correctedAnswer').html('The correct answer was: ' + rightAnswerText);
 		answered = true;
 	}
-	answerCountdown();
 	
+	if(currentQuestion == (triviaQuestions.length-1)){
+		setTimeout(scoreboard, 5000)
+	} else{
+		currentQuestion++;
+		setTimeout(newQuestion, 5000);
+	}	
 }
 
 function scoreboard(){
-	$('#message').html(" ");
-	$('#correctedAnswer').html(" ");
-	$('#gif').html(" ");
+	$('#timeLeft').empty();
+	$('#message').empty();
+	$('#correctedAnswer').empty();
+	$('#gif').empty();
 
 	$('#finalMessage').html(messages.finished);
 	$('#correctAnswers').html("Correct Answers: " + correctAnswer);
@@ -183,5 +178,4 @@ function scoreboard(){
 	$('#unanswered').html("Unanswered: " + unanswered);
 	$('#startOverBtn').addClass('reset');
 	$('#startOverBtn').html('Start Over?');
-
 }

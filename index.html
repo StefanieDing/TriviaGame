@@ -12,31 +12,27 @@
 	<header>
 		<img src= 'assets/images/pixarHeader.jpg' alt = 'headerImg' width = '100%'>
 	</header>
+
 	<div class = 'container'>
 		
 		<button class = 'btn btn-primary' id = 'startBtn'>Start</button>
-
-		<div class = 'question-container'>
+			<!-- Question page -->
 			<div id = timeLeft></div> 
+			<div id = currentQuestion></div> 
 			<div class = 'question'></div>
 			<div class = 'answerList'></div>
-		</div>
 		
-		<div class = 'answer-container'>
+			<!-- Answer Page -->
 			<div id = message></div>
 			<div id = correctedAnswer></div>
 			<div id = gif></div>
-		</div>
-
-		<div class = 'scoreboard-container'>
+		
+			<!-- Scoreboard -->
 			<div id = finalMessage></div>
 			<div id = correctAnswers></div>
 			<div id = incorrectAnswers></div>
 			<div id = unanswered></div>
-
 			<div id = 'startOverBtn'></div>
-		</div>
-
 	</div>
 
 	<script src="https://code.jquery.com/jquery.js"></script>
