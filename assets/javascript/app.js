@@ -176,5 +176,6 @@ function scoreboard(){
 	$('#incorrectAnswers').html("Incorrect Answers: " + incorrectAnswer);
 	$('#unanswered').html("Unanswered: " + unanswered);
 	$('#startOverBtn').addClass('reset');
+	$('#startOverBtn').show();
 	$('#startOverBtn').html('Start Over?');
 }
