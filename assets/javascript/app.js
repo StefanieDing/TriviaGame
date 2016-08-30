@@ -7,7 +7,7 @@ var triviaQuestions = [{
 	answerList: ["Steve Jobs", "Bill Gates", "Peter Thiel", "Mark Zuckerberg"],
 	answer: 0
 },{
-	question: "What was Pixar's first feature-length film that was released in 1995.",
+	question: "What was Pixar's first feature-length film that was released in 1995?",
 	answerList: ["Toy Story", "A Bug's Life", "Monster's Inc", "Finding Nemo"],
 	answer: 0
 },{
