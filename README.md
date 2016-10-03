@@ -1,13 +1,40 @@
-# TriviaGame
+# Trivia Game
 Week 5 Assignment: Trivia Game
 
-A Pixar Trivia
----------------
+## A Pixar Trivia
 
-Play here: http://gentle-garden-66884.herokuapp.com/
+Created during Week 5 of Rutgers Coding Bootcamp. The challenge was to create a timed trivia game. Only 15 seconds were alotted to each question. After all of the questions were finished, the final scoreboard of how well you did would appear.
 
-A Pixar Jr. Trivia
----------------
-An easier version of Pixar Trivia 
+## Motivation
 
-Play here: http://stark-reaches-99525.herokuapp.com
+I wanted to create a Pixar trivia game that was towards the more difficult side and gave animation buffs a challenge. I also created a simpler version for friends and family after the initial app that can be found here: https://pixartriviajr.herokuapp.com/
+
+## Getting Started 
+Play here: https://pixartrivia.herokuapp.com/
+
+## Screenshots
+
+## Technologies used
+- Google Fonts
+- Bootstrap
+- jQuery
+
+### Prerequisities
+
+```
+- Bootstrap: visit http://getbootstrap.com/getting-started/ for the CDN and link in html
+- jQuery: visit http://code.jquery.com/ and link in html
+```
+
+## Built With
+
+* Sublime Text - Text Editor
+* Bootstrap- Wireframe
+
+## Authors
+
+* **Stefanie Ding** - *HTML/CSS/JS* - [Stefanie Ding](https://github.com/StefanieDing)
+
+## Acknowledgments
+
+* Thanks to Dan, Nate, and Jimmy from Rutgers Coding Bootcamp for additional help.
