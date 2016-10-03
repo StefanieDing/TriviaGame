@@ -14,6 +14,17 @@ Play here: https://pixartrivia.herokuapp.com/
 
 ## Screenshots
 
+![Question](assets/images/Question.png)
+Displays time left, question number, and highlights answers on hover.
+
+![Answer-Correct](assets/images/correct.png)
+
+![Answer-Wrong](assets/images/wrong.png)
+Displays answer if answered incorrectly
+
+![Scoreboard](assets/images/Scoreboard.png)
+Final Scoreboard
+
 ## Technologies used
 - Google Fonts
 - Bootstrap
