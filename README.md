@@ -30,7 +30,7 @@ Final Scoreboard
 - Bootstrap
 - jQuery
 
-### Prerequisities
+### Prerequisites
 
 ```
 - Bootstrap: visit http://getbootstrap.com/getting-started/ for the CDN and link in html
